@@ -13,22 +13,6 @@ import { getConfig } from "../common/config.js";
 let capturerWindow: BrowserWindow;
 let isDone: boolean;
 function showAudioDialog(): boolean {
-    const options: MessageBoxOptions = {
-        type: "question",
-        buttons: ["Yes", "No"],
-        defaultId: 1,
-        title: "Screenshare audio",
-        message: "Would you like to screenshare audio?",
-        detail: "Selecting yes will make viewers of your stream hear your entire system audio.",
-    };
-
-    void dialog.showMessageBox(capturerWindow, options).then(({ response }) => {
-        if (response === 0) {
-            return true;
-        } else {
-            return false;
-        }
-    });
     return true;
 }
 
