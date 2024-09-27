@@ -31,7 +31,7 @@ function registerCustomHandler(): void {
                     console.log("WebRTC Capturer detected, skipping window creation."); //assume webrtc capturer is used
                     let options: Streams = { video: sources[0] };
                     if (sources[0] === undefined) return callback({});
-                    if (showAudioDialog() === true) options = { video: sources[0], audio: "loopbackWithMute" };
+                    /*if (showAudioDialog() === true) options = { video: sources[0], audio: "loopbackWithMute" };*/
                     callback(options);
                 } else {
                     capturerWindow = new BrowserWindow({
